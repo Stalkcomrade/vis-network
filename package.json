@@ -42,6 +42,7 @@
     "url": "https://opencollective.com/visjs"
   },
   "scripts": {
+    "prepare": "npm run build:declarations && npm run build:code && npm run build:legacy:types && npm run build:legacy:code && npm run build:legacy:images",
     "serve": "serve -l tcp://localhost:58253",
     "test": "npm run test:unit && npm run test:e2e:functional && npm run test:e2e:visual",
     "test:e2e:functional": "cross-env CYPRESS_FUNCTIONAL=true npm run test:e2e:headless",
